@@ -1,0 +1,339 @@
+.lumiere.active {
+  /* Styles à appliquer à .lumiere lorsque .sun a la classe .active */
+  background: rgb(0, 0, 0);
+  transition: all 5s;
+}
+
+.sun {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: #fdd835; /* Jaune pour le soleil */
+  border-radius: 50%;
+  top: -70px;
+  left: 220px;
+}
+
+.lumiere.active > .sun .night {
+  position: relative;
+  left: -2px;
+  width: 40px;
+  height: 60px;
+  background: #080808; /* Jaune pour le soleil */
+  border-radius: 50%;
+  transition: background 5s, width 1s;
+}
+.lumiere > .sun > .night {
+  width: 0px;
+  height: 60px;
+  background: #c0c0c0; /* Jaune pour le soleil */
+  border-radius: 50%;
+  transition: background 5s, width 1s;
+}
+
+/* pour anmiation de l'humiditer  */
+
+.humiditer.active {
+  background-color: gray;
+  transition: all 5s;
+}
+
+.humiditer > .nuage > div {
+  height: 40px;
+  width: 40px;
+  background: rgb(107, 107, 107);
+  translate: 25px 10px;
+  border-radius: 4000px;
+  top: -110px;
+  left: 240px;
+}
+
+.humiditer > .nuage > div:nth-child(2) {
+  translate: -15px -30px;
+}
+
+.humiditer > .nuage {
+  height: 50px;
+  width: 50px;
+  border-radius: 40px;
+  background: rgb(107, 107, 107);
+  z-index: 2;
+}
+.humiditer > .nuage1 {
+  position: relative;
+  top: -70px;
+  left: 220px;
+  translate: 60px;
+  opacity: 0;
+  transition: all 1s;
+  border-radius: 40px;
+}
+.humiditer > .nuage2 {
+  position: relative;
+  top: -100px;
+  left: 60px;
+  translate: -60px;
+  opacity: 0;
+  transition: all 2s;
+}
+
+.humiditer.active > .nuage2 {
+  opacity: 1;
+  transition: all 2s;
+  translate: 70px;
+}
+.humiditer.active > .nuage1 {
+  opacity: 1;
+  transition: all 1s;
+  translate: -0px;
+}
+
+.humiditer > .eau {
+  width: 155px;
+  height: 100px;
+  position: relative;
+  top: -90%;
+  left: 65%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.humiditer.active > .eau > .goute {
+  opacity: 1;
+  width: 4px;
+  height: 20px;
+  background-color: #00f;
+  border-radius: 4px;
+  position: absolute;
+  top: -10px;
+  animation: pluie 5s linear infinite;
+  animation-delay: 10s; /* Délai de 5 secondes avant le début de l'animation */
+}
+
+.humiditer > .eau > .goute {
+  opacity: 0;
+  width: 4px;
+  height: 20px;
+  background-color: #00f;
+  border-radius: 4px;
+  position: absolute;
+  top: -10px;
+
+
+}
+
+@keyframes pluie {
+  0% {
+    transform: translateY(0) rotate(0);
+    opacity: 0;
+  }
+  0% {
+    transform: translateY(0) rotate(0);
+    opacity: 1;
+  }
+  99% {
+    transform: translateY(100vh);
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* ider pour le température :
+Plante animée :
+Une plante qui pousse ou flétrit en fonction de la température. 
+
+Thermomètre animé :
+Un thermomètre qui monte ou descend en fonction de la température.
+valeur chaut >= 25°
+valeur froid <=5°
+*/
+
+.menubule > .temperature > .termos {
+  display: flex;
+  width: 51px;
+  justify-content: center;
+  flex-wrap: wrap; /* Permettre le passage à la ligne */
+  rotate: 30deg;
+  position: relative;
+  top: -70px;
+  left: 175px;
+}
+
+.menubule > .temperature > .termos > .indicateur {
+  background: grey;
+  height: 100px;
+  width: 25px;
+  border-radius: 300px;
+  transition: all 1s;
+}
+
+.menubule > .temperature > .termos > .indicateur > div {
+  position: relative;
+  translate: 7.5px 5px;
+  border-radius: 300px;
+  width: 10px;
+  height: 90px;
+  z-index: 0;
+  transition: all 1s;
+}
+.menubule > .temperature > .termos > .indicateur > div:nth-child(1) {
+  background: whitesmoke;
+  transition: all 1s;
+}
+
+.menubule > .temperature > .termos > .rond {
+  background: gray;
+  height: 50px;
+  width: 50px;
+  border-radius: 400px;
+  translate: 0px -15px;
+  transition: all 1s;
+}
+
+.menubule > .temperature > .termos > .rond > div {
+  background: rgb(177, 177, 177);
+  height: 35px;
+  width: 35px;
+  border-radius: 400px;
+  translate: 7px 7px;
+  transition: all 1s;
+}
+.menubule > .temperature.froid > .termos > .rond > div {
+  background: rgb(106, 190, 211);
+  box-shadow: 3px 3px 20px rgb(106, 190, 211);
+  height: 35px;
+  width: 35px;
+  border-radius: 400px;
+  translate: 7px 7px;
+  transition: all 1s;
+}
+.menubule > .temperature.chaut > .termos > .rond > div {
+  box-shadow: 5px 5px 20px rgb(211, 106, 106);
+  background: rgb(211, 106, 106);
+  height: 35px;
+  width: 35px;
+  border-radius: 400px;
+  translate: 7px 7px;
+  transition: all 1s;
+}
+
+.menubule > .temperature > .termos > .indicateur > div:nth-child(2) {
+  translate: 7.5px -85px;
+  transform: translatey(30px);
+  height: 60px;
+  background: rgb(177, 177, 177);
+  transition: all 1s;
+}
+
+.menubule > .temperature.chaut > .termos > .indicateur > div:nth-child(2) {
+  translate: 7.5px -85px;
+  transform: translatey(10px);
+  height: 80px;
+  box-shadow: 5px 5px 20px rgb(211, 106, 106);
+  background: rgb(211, 106, 106);
+  transition: all 1s;
+}
+.menubule > .temperature.froid > .termos > .indicateur > div:nth-child(2) {
+  translate: 7.5px -85px;
+  transform: translatey(50px);
+  height: 80px;
+  box-shadow: 3px 3px 20px rgb(106, 190, 211);
+  background: rgb(106, 190, 211);
+  transition: all 1s;
+}
+
+/* pour l'arosage  */
+
+.case > .arosa {
+  position: relative;
+  top: 60px;
+  text-align: end;
+}
+
+#arosage {
+  height: 40px;
+  margin-right: 20px;
+  width: 120px;
+  border: none;
+  border-radius: 15px;
+  border: 5px solid rgb(107, 107, 107);
+}
+
+.arosage > .text {
+  margin-top: -1px;
+  width: 100px;
+  margin-bottom: 0px;
+}
+
+.on {
+  color: green;
+  background: lightgreen;
+  cursor: pointer;
+}
+.off {
+  cursor: pointer;
+  color: red;
+  background: lightsalmon;
+}
+
+/* pour la feunètre */
+
+.feunetrebtn {
+  margin-left: 165px;
+}
+
+.feunetrebtn > button {
+  width: 120px;
+  height: 40px;
+  border: 5px solid rgb(107, 107, 107);
+
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.feunetrebtn > .open {
+  margin: 22px 0px 0px 0px;
+  background: lightblue;
+  color: blue;
+  cursor: pointer;
+}
+.feunetrebtn > .close {
+  cursor: pointer;
+  margin: 5px 0px 0px 0px;
+  background: lightpink;
+  color: rgb(255, 97, 124);
+}
+
+/* pour la commande des led  */
+
+input[type="color"] {
+	border: none;
+  background-color: transparent;
+  width: 73px;
+  height: 70px;
+  cursor: pointer;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+
+}
+input[type="color"]::-webkit-color-swatch {
+	border: 3px solid;
+  border-radius: 15px;
+}
+.menubule > .color {
+  cursor: pointer;
+  margin: 30px 0px 0px 0px;
+  width: 100px;
+  height: 40px;
+  color: rgb(0, 0, 0);
+  background: rgb(255, 234, 237);
+  border-radius: 15px;
+  border: 5px solid rgb(107, 107, 107);
+  font-size: 20px;
+  font-weight: bold;
+}

@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  overflow-x: hidden; /* Empêche le défilement horizontal */
+  background: #427aa1;
+}
+.policeM {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+ img {
+  border-radius: 30px;
+}
+
+a{
+  font-style: none;
+  text-decoration: none;
+  color: white;
+}
+
+.flex> img {
+margin-right: 20px ;
+}
+
+.menu {
+  display: flex;
+  justify-content: start;
+  background: #06668c;
+  gap: 3%;
+  font-size: 20px;
+
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.menu > .case {
+  border-right: 2px solid #ebf2fa;
+  padding-right: 10px;
+  color: #ebf2fa;
+  margin: 11px 0px 10px;
+  transition: all 1s;
+  cursor: pointer;
+}
+.menu > .case:hover {
+  border-right: 2px solid #7f8386;
+  color: #7f8386;
+}
+
+.menu > .logo {
+  width: 45px;
+  height: 35px;
+  margin: 5px;
+  border-radius: 0;
+}
+
+.information {
+  display: flex;
+}
+@media (max-width : 700px ) {
+    .information{
+        flex-direction: column;
+    }
+    .flex{
+        display: flex ; 
+        flex-wrap: wrap; /* Permettre le passage à la ligne */
+
+    }
+}
+
+.information > .flex > .case {
+  background-color: #333333;
+  margin: 25px;
+  border-radius: 30px;
+  padding: 10px;
+  background: #a4bd01;
+  box-shadow: 13px 9px #679436;
+  color: white;
+}
+
+
+.flex > .img {
+
+    background-color: #333333;
+    margin: 25px;
+    border-radius: 30px;
+    padding: 10px;
+    background: #a4bd01;
+    box-shadow: 13px 9px #679436;
+    color: white;
+
+
+
+  width: 200px;
+  height: 200px;
+  row-gap: 90px ;
+}
+
+.flex > .img > img {
+    margin-left: 5px ;
+    margin-top: 2px ;
+    border-radius: 30px ;
+}
+
+
+footer {
+  background-color: #333333;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  margin-top: 30px;
+  width: 100%;
+  bottom: 0;
+  clip-path: polygon(0 0, 100% 28px, 100% 100%, 0 100%);
+}
+@media (min-height : 1366px  ) {
+    footer{
+        position: absolute;
+    }
+
+    
+}
+
+footer > .icon {
+  display: flex;
+  gap: 13px;
+  justify-content: center;
+}
+footer > .icon > .case {
+  display: flex;
+  background: white;
+  border-radius: 12px;
+  border: 2px solid white;
+  height: 50px;
+  width: 50px;
+
+  margin-bottom: -16px;
+}
+
+.ending {
+  margin-bottom: -16px;
+}
+.policeM > .text {
+  margin-bottom: -6px;
+  font-size: 16px;
+}

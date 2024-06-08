@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="animation.css">
+  <title>Serre conecter</title>
+</head>
+
+<body>
+  <div class="menu policeM">
+    <img width="45px " height="35px"  src="image/logo.png" class="logo"></img>
+    <div class="case">
+      <a href="page2.html">
+        information
+      </a>
+    </div>
+    <div class="case"> paneaux de control </div>
+
+  </div>
+
+  <div class="menubule policeM">
+
+    <div class="temperature">
+      <p class="titre">température</p>
+      <div id="temperatureDiv">°c</div>
+      <div class="termos">
+        <div class="indicateur">
+          <div></div>
+          <div></div>
+        </div>
+        <div class="rond">
+          <div></div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="humiditer">
+      <p class="titre">humidité</p>
+      <div id="humidityDiv">%</div>
+      <div class="nuage nuage1">
+        <div></div>
+        <div></div>
+      </div>
+      <div class="nuage2 nuage">
+        <div></div>
+        <div></div>
+      </div>
+      <div class="eau">
+        <div class="goute"></div>
+      </div>
+
+    </div>
+
+    <div class="lumiere container">
+      <p class="titre">luminosité</p>
+
+      <div id="lightDiv">%</div>
+      <div class="sun">
+        <div class="night"></div>
+        </dvi>
+      </div>
+    </div>
+
+    <div class="case">
+      <p class="titre "> arrosage</p>
+      <div class=" arosa">
+        <button id="arosage" class="arosage on">
+          <h1 class="text" onclick="onarosage()"> on</h1>
+        </button>
+        <button id="arosage" class="arosage off">
+          <h1 class="text" onclick="offarosage()">off</h1>
+        </button>
+      </div>
+    </div>
+
+
+
+    <div class="case">
+      <p class="titre"> feunêtre</p>
+      <div class="feunetrebtn">
+        <button class="open" onclick="onfeunètre()"> ouverture</button> <br>
+        <button class="close" onclick="offfeunètre()"> fermeture</button>
+      </div>
+    </div>
+
+    <div class="case">
+      <p class="titre "> led color </p>
+      <div class=" menubule">
+        <input type="color" id="piker" value="#ff006e">
+        <button class="color" onclick="setcolor()">valider</button>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+  <footer class="policeM">
+    <div class="text">
+      <h1>serrre conecter</h1>
+    </div>
+    <div class="icon">
+      <div class="case">
+        <a href="https://github.com/Baptooooooooo"><img width="50" height="50" src="https://img.icons8.com/ios-filled/50/github.png" alt="github" /></a>
+      </div>
+      <div class="case">
+        <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/youtube.png" alt="youtube" />
+      </div>
+    </div>
+    <div class="ending">
+      <h6>dising by @baptooooooooo</h6>
+    </div>
+  </footer>
+
+
+  <script defer src="index.js"></script>
+</body>
+
+</html>
