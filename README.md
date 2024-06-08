@@ -37,10 +37,10 @@ La serre est accompagnée d'un système électronique entièrement contrôlable 
 </div>
 
 ## Serre Finie
-Voici quelques images de la serre une fois terminée.
+Voici une image de la serre une fois terminée.
 
 <div align="center">
-    <img src="html/image/inspiration.jpg" alt="Inspiration" width="300" height="280">
+    <img src="html/image/img_finie.jpg" alt="Inspiration" width="250" height="450">
 </div>
 
 ## Conclusion
